@@ -1,0 +1,73 @@
+:root{
+    --bg-primary: #282828;
+    --bg-secondary: #3c3836;
+    --color-red: #cc241d;
+    --color-orange: #d65d0e;
+    --color-yellow: #d79921;
+    --color-green: #98971a;
+    --color-blue: #458588;
+    --color-purple: #b16286;
+    --color-aqua: #689d6a;
+    --color-gray: #928374;
+    --color-white: #ebdbb2;
+
+    --font-body-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--color-white);
+    font-family: var(--font-body-primary);
+
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 60%;
+}
+
+@media (max-width: 1100px) {
+    body{
+        padding-right: 30%;
+    }
+  }
+
+footer{
+    margin-top: 60px;
+}
+
+.headingText{
+    font-size: 55px;
+}
+
+.sectionHeadingText{
+    font-size: 35px;
+}
+
+.sectionText{
+    font-size: 20px;
+    justify-content: left;
+    padding-left: 50px;
+}
+
+.coloredYellow{
+    color: var(--color-yellow);
+}
+
+.coloredGreen{
+    color: var(--color-green);
+}
+
+.coloredBlue{
+    color: var(--color-blue);
+}
+
+.coloredAqua{
+    color: var(--color-aqua);
+}
+
+.coloredPurple{
+    color: var(--color-purple);
+}
+
+.bold{
+    font-weight: bold;
+}
