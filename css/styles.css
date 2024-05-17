@@ -1,102 +1,206 @@
 :root{
-    --bg-primary: #282828;
-    --bg-secondary: #3c3836;
-    --color-red: #cc241d;
-    --color-orange: #d65d0e;
+    --bg-dark: #282828;
+    --bg-light: #fbf1c7;
+    --fg-dark: #3c3836;
+    --fg-light: #ebdbb2;
+
     --color-yellow: #d79921;
     --color-green: #98971a;
     --color-blue: #458588;
-    --color-purple: #b16286;
-    --color-aqua: #689d6a;
-    --color-gray: #928374;
-    --color-white: #ebdbb2;
-
-    --font-body-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 body{
-    background-color: var(--bg-primary);
-    color: var(--color-white);
-    font-family: var(--font-body-primary);
-
-    padding-left: 100px;
-    padding-right: 60%;
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 1.5vw;
+    display: flex;
+    font-size: 1.5vw;
+    flex-direction: column;
+    align-items: left;
+    line-height: 1.8;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-@media (max-width: 1100px) {
-    body{
-        padding-right: 30%;
-    }
-  }
-
-footer{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.headingText{
-    font-size: 55px;
-}
-
-.sectionHeadingText{
-    font-size: 35px;
-}
-
-.sectionText{
-    font-size: 20px;
-    justify-content: left;
-    padding-left: 50px;
-}
-
-
-/* Font Colors */
-.coloredYellow{
-    color: var(--color-yellow);
-}
-
-.coloredGreen{
-    color: var(--color-green);
-}
-
-.coloredBlue{
-    color: var(--color-blue);
-}
-
-.coloredAqua{
-    color: var(--color-aqua);
-}
-
-.coloredPurple{
-    color: var(--color-purple);
-}
-
-
-/* Font Weight */
-.normal{
-    font-weight: normal;
-}
-
-.bold{
-    font-weight: bold;
-}
-
-.italic{
+header{
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
     font-style: italic;
 }
 
-
-
-.mr-15{
-    margin-right: 15px;
+header h1{
+    font-size: 5vw;
+    margin: 0;
 }
 
-/* Link Style */
+main{
+    margin-right: 40vw;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+main p{
+    font-size: 2.2vw;
+    font-style: italic;
+}
+
+section{
+    margin-bottom: 2vw;
+}
+
+footer{
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+h2{
+    font-size: 4vw;
+    margin-bottom: 1vw;
+}
+
+.highlight-yellow{
+    color: var(--color-yellow);
+    font-weight: bold;
+}
+
+.highlight-blue{
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
 a{
-    color: var(--color-white);
+    margin: 0 0.5vw;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover{
-    color: var(--color-aqua);
+    color: var(--color-green) !important;
+}
+
+
+/* Light mode styles */
+body.light-mode{
+    background-color: var(--bg-light);
+    color: var(--fg-dark);
+}
+
+body.light-mode header,
+body.light-mode footer{
+    background-color: var(--bg-light);
+    color: var(--fg-dark);
+}
+
+body.light-mode .icons a{
+    color: var(--fg-dark);
+}
+
+
+/* Dark mode styles */
+body.dark-mode{
+    background-color: var(--bg-dark);
+    color: var(--fg-light);
+}
+
+body.dark-mode header,
+body.dark-mode footer{
+    background-color: var(--bg-dark);
+    color: var(--fg-light);
+}
+
+body.dark-mode .icons a{
+    color: var(--fg-light);
+}
+
+
+/* Toggle button */
+.theme-toggle-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: 2px solid currentColor;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: inherit;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 1080px){
+    body{
+        font-size: 2vw;
+    }
+
+    header h1{
+        font-size: 6vw;
+    }
+
+    main p{
+        font-size: 3.2vw;
+    }
+
+    h2{
+        font-size: 5vw;
+    }
+
+    footer{
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 720px) {
+    body{
+        font-size: 3vw;
+    }
+
+    header{
+        width: 70%;
+    }
+
+    header h1{
+        font-size: 7vw;
+    }
+
+    main p{
+        font-size: 4.2vw;
+    }
+
+    h2{
+        font-size: 6vw;
+    }
+
+    footer{
+        font-size: 2.8vw;
+    }
+}
+
+@media (max-width: 540px) {
+    body{
+        font-size: 3.8vw;
+    }
+    
+    header{
+        width: 70%;
+    }
+
+    header h1{
+        font-size: 7.8vw;
+    }
+
+    main p{
+        font-size: 5vw;
+    }
+
+    main{
+        margin-right: 10vw;
+    }
+
+    h2{
+        font-size: 6.8vw;
+    }
+
+    footer{
+        font-size: 3.6vw;
+    }
 }
