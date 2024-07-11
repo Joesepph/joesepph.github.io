@@ -1,4 +1,4 @@
-:root{
+:root {
     --bg-dark: #282828;
     --bg-light: #fbf1c7;
     --fg-dark: #3c3836;
@@ -12,17 +12,18 @@
     --secletion-color: #3c3836;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     color: var(--secletion-color);
     background: var(--selection-bg);
 }
-  
+
 ::selection {
     color: var(--secletion-color);
     background: var(--selection-bg);
 }
 
-body{
+body {
     font-family: "Lora", serif;
     margin: 0;
     padding: 1.5vw;
@@ -31,103 +32,102 @@ body{
     flex-direction: column;
     align-items: left;
     line-height: 1.8;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
-header{
+header {
     text-align: left;
     width: 100%;
     box-sizing: border-box;
     font-style: italic;
 }
 
-header h1{
+header h1 {
     font-size: 5vw;
     margin: 0;
 }
 
-main{
+main {
     margin-right: 40vw;
     box-sizing: border-box;
     text-align: left;
 }
 
-main p{
+main p {
     font-size: 2.2vw;
     font-style: italic;
 }
 
-section{
+section {
     margin-bottom: 2vw;
 }
 
-footer{
+footer {
     text-align: center;
     font-size: 0.8vw;
 }
 
-h2{
+h2 {
     font-size: 4vw;
     margin-bottom: 1vw;
 }
 
-.highlight-yellow{
+.highlight-yellow {
     color: var(--color-yellow);
     font-weight: bold;
 }
 
-.highlight-blue{
+.highlight-blue {
     color: var(--color-blue);
     font-weight: bold;
 }
 
-a{
+a {
     margin: 0 0.5vw;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-a:hover{
+a:hover {
     color: var(--color-green) !important;
 }
 
-
 /* Light mode styles */
-body.light-mode{
+body.light-mode {
     background-color: var(--bg-light);
     color: var(--fg-dark);
 }
 
 body.light-mode header,
-body.light-mode footer{
+body.light-mode footer {
     background-color: var(--bg-light);
     color: var(--fg-dark);
 }
 
-body.light-mode .icons a{
+body.light-mode .icons a {
     color: var(--fg-dark);
 }
 
-
 /* Dark mode styles */
-body.dark-mode{
+body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--fg-light);
 }
 
 body.dark-mode header,
-body.dark-mode footer{
+body.dark-mode footer {
     background-color: var(--bg-dark);
     color: var(--fg-light);
 }
 
-body.dark-mode .icons a{
+body.dark-mode .icons a {
     color: var(--fg-light);
 }
 
-
 /* Toggle button */
-.theme-toggle-button{
+.theme-toggle-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -141,80 +141,80 @@ body.dark-mode .icons a{
 }
 
 /* Responsive styles */
-@media (max-width: 1080px){
-    body{
+@media (max-width: 1080px) {
+    body {
         font-size: 2vw;
     }
 
-    header h1{
+    header h1 {
         font-size: 6vw;
     }
 
-    main p{
+    main p {
         font-size: 3.2vw;
     }
 
-    h2{
+    h2 {
         font-size: 5vw;
     }
 
-    footer{
+    footer {
         font-size: 1.8vw;
     }
 }
 
 @media (max-width: 720px) {
-    body{
+    body {
         font-size: 3vw;
     }
 
-    header{
+    header {
         width: 70%;
     }
 
-    header h1{
+    header h1 {
         font-size: 7vw;
     }
 
-    main p{
+    main p {
         font-size: 4.2vw;
     }
 
-    h2{
+    h2 {
         font-size: 6vw;
     }
 
-    footer{
+    footer {
         font-size: 2.8vw;
     }
 }
 
 @media (max-width: 540px) {
-    body{
+    body {
         font-size: 3.8vw;
     }
-    
-    header{
+
+    header {
         width: 70%;
     }
 
-    header h1{
+    header h1 {
         font-size: 7.8vw;
     }
 
-    main p{
+    main p {
         font-size: 5vw;
     }
 
-    main{
+    main {
         margin-right: 10vw;
     }
 
-    h2{
+    h2 {
         font-size: 6.8vw;
     }
 
-    footer{
+    footer {
         font-size: 3.6vw;
     }
 }
