@@ -9,17 +9,17 @@
     --color-blue: #458588;
 
     --selection-bg: #83a598;
-    --secletion-color: #3c3836;
+    --selection-color: #3c3836;
 }
 
 ::-moz-selection {
     /* Code for Firefox */
-    color: var(--secletion-color);
+    color: var(--selection-color);
     background: var(--selection-bg);
 }
 
 ::selection {
-    color: var(--secletion-color);
+    color: var(--selection-color);
     background: var(--selection-bg);
 }
 
