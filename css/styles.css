@@ -94,6 +94,11 @@ a:hover {
     color: var(--color-green) !important;
 }
 
+.zed-a {
+    margin: 0;
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -115,6 +120,19 @@ a:hover {
     font-style: italic;
 }
 
+/* #quotebox doesn't work for some reason lol */
+#quote {
+    font-size: 1vw;
+}
+
+#author {
+    font-size: 1vw;
+}
+
+#quotebox {
+    margin-top: 5vw;
+}
+
 /* Light mode styles */
 body.light-mode {
     background-color: var(--bg-light);
@@ -122,6 +140,10 @@ body.light-mode {
 }
 
 body.light-mode .icons a {
+    color: var(--fg-dark);
+}
+
+body.light-mode a {
     color: var(--fg-dark);
 }
 
@@ -136,6 +158,10 @@ body.dark-mode {
 }
 
 body.dark-mode .icons a {
+    color: var(--fg-light);
+}
+
+body.dark-mode a {
     color: var(--fg-light);
 }
 
@@ -178,6 +204,14 @@ body.dark-mode .icons a {
     .iframe-warning {
         font-size: 1.5vw;
     }
+
+    #quote {
+        font-size: 1.7vw;
+    }
+
+    #author {
+        font-size: 1.7vw;
+    }
 }
 
 @media (max-width: 720px) {
@@ -211,6 +245,14 @@ body.dark-mode .icons a {
 
     .container {
         display: unset;
+    }
+
+    #quote {
+        font-size: 2.2vw;
+    }
+
+    #author {
+        font-size: 2.2vw;
     }
 }
 
@@ -249,5 +291,13 @@ body.dark-mode .icons a {
 
     .container {
         display: unset;
+    }
+
+    #quote {
+        font-size: 2.7vw;
+    }
+
+    #author {
+        font-size: 2.7vw;
     }
 }

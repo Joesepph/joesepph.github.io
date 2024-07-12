@@ -1,0 +1,122 @@
+[
+  {
+    "philosopher": "Socrates",
+    "quote": "The unexamined life is not worth living."
+  },
+  {
+    "philosopher": "Plato",
+    "quote": "Wise men speak because they have something to say; fools because they have to say something."
+  },
+  {
+    "philosopher": "Aristotle",
+    "quote": "Knowing yourself is the beginning of all wisdom."
+  },
+  {
+    "philosopher": "Confucius",
+    "quote": "It does not matter how slowly you go as long as you do not stop."
+  },
+  {
+    "philosopher": "Lao Tzu",
+    "quote": "The journey of a thousand miles begins with one step."
+  },
+  {
+    "philosopher": "Immanuel Kant",
+    "quote": "Science is organized knowledge. Wisdom is organized life."
+  },
+  {
+    "philosopher": "René Descartes",
+    "quote": "I think, therefore I am."
+  },
+  {
+    "philosopher": "John Locke",
+    "quote": "What worries you, masters you."
+  },
+  {
+    "philosopher": "David Hume",
+    "quote": "Beauty in things exists in the mind which contemplates them."
+  },
+  {
+    "philosopher": "Jean-Jacques Rousseau",
+    "quote": "Man is born free, and everywhere he is in chains."
+  },
+  {
+    "philosopher": "Friedrich Nietzsche",
+    "quote": "He who has a why to live can bear almost any how."
+  },
+  {
+    "philosopher": "Karl Marx",
+    "quote": "The philosophers have only interpreted the world, in various ways. The point, however, is to change it."
+  },
+  {
+    "philosopher": "Arthur Schopenhauer",
+    "quote": "The world is my idea."
+  },
+  {
+    "philosopher": "John Stuart Mill",
+    "quote": "The only freedom which deserves the name is that of pursuing our own good in our own way."
+  },
+  {
+    "philosopher": "Bertrand Russell",
+    "quote": "The good life is one inspired by love and guided by knowledge."
+  },
+  {
+    "philosopher": "Simone de Beauvoir",
+    "quote": "One is not born, but rather becomes, a woman."
+  },
+  {
+    "philosopher": "Søren Kierkegaard",
+    "quote": "Life can only be understood backwards; but it must be lived forwards."
+  },
+  {
+    "philosopher": "Michel Foucault",
+    "quote": "Knowledge is not for knowing: knowledge is for cutting."
+  },
+  {
+    "philosopher": "Hannah Arendt",
+    "quote": "The most radical revolutionary will become a conservative the day after the revolution."
+  },
+  {
+    "philosopher": "G.W.F. Hegel",
+    "quote": "Nothing great in the world has ever been accomplished without passion."
+  },
+  {
+    "philosopher": "Ludwig Wittgenstein",
+    "quote": "The limits of my language mean the limits of my world."
+  },
+  {
+    "philosopher": "Albert Camus",
+    "quote": "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion."
+  },
+  {
+    "philosopher": "Martin Heidegger",
+    "quote": "Being is the most self-evident and yet the most difficult thing."
+  },
+  {
+    "philosopher": "Maurice Merleau-Ponty",
+    "quote": "We know not through our intellect but through our experience."
+  },
+  {
+    "philosopher": "Jacques Derrida",
+    "quote": "There is nothing outside the text."
+  },
+  {
+    "philosopher": "Edmund Husserl",
+    "quote": "We are not natural products of the natural world."
+  },
+  {
+    "philosopher": "Baruch Spinoza",
+    "quote": "The more you struggle to live, the less you live."
+  },
+  {
+    "philosopher": "Francis Bacon",
+    "quote": "Knowledge is power."
+  },
+  {
+    "philosopher": "Heraclitus",
+    "quote": "No man ever steps in the same river twice, for it's not the same river and he's not the same man."
+  },
+  {
+    "philosopher": "Epictetus",
+    "quote": "It's not what happens to you, but how you react to it that matters."
+  }
+]
