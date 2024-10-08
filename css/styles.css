@@ -1,22 +1,15 @@
 :root {
-    --bg-dark: #282828;
+    --bg-dark: #f9f9f9;
     --bg-light: #fbf1c7;
     --fg-dark: #3c3836;
-    --fg-light: #ebdbb2;
+    --fg-light: #ffffe6;
 
-    --color-yellow: #d79921;
-    --color-green: #98971a;
-    --color-blue: #458588;
-    --color-darkorange: #af3a03;
+    --color-yellow: #d19a66;
+    --color-green: #98c379;
+    --color-blue: #56b6c2;
 
-    --selection-bg: #83a598;
-    --selection-color: #3c3836;
-}
-
-@font-face {
-    font-family: Monaspace-Neon;
-    src: url(fonts/MonaspaceNeon-Bold.woff2);
-    font-weight: bold;
+    --selection-bg: #50a14f;
+    --selection-color: #383a42;
 }
 
 ::-moz-selection {
@@ -31,7 +24,9 @@
 }
 
 body {
-    font-family: "Lora", serif;
+    font-family: "Rubik";
+    background-color: var(--bg-dark);
+    color: var(--fg-light);
     margin: 0;
     padding: 1.5vw;
     display: flex;
@@ -39,9 +34,29 @@ body {
     flex-direction: column;
     align-items: left;
     line-height: 1.8;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
+    overflow: hidden;
+    cursor:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.5" fill="white"/><circle cx="8" cy="8" r="2" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.3" /></filter></defs></svg>')
+            8 8,
+        auto;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e2127;
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+
+.star {
+    position: absolute;
+    background-color: #5c6370;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+    opacity: 0.5;
 }
 
 header {
@@ -64,10 +79,6 @@ main {
 main p {
     font-size: 2.2vw;
     font-style: italic;
-}
-
-.gh {
-    font-family: Monaspace-Neon;
 }
 
 section {
@@ -95,18 +106,24 @@ h2 {
 }
 
 a {
+    color: var(--fg-light);
     margin: 0 0.5vw;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
+    cursor:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="4" fill="white"/><circle cx="16" cy="16" r="3" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.5" /></filter></defs></svg>')
+            16 16,
+        auto;
     color: var(--color-green) !important;
 }
 
 .zed-a {
     margin: 0;
-    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .container {
@@ -143,38 +160,6 @@ a:hover {
     margin-top: 5vw;
 }
 
-/* Light mode styles */
-body.light-mode {
-    background-color: var(--bg-light);
-    color: var(--fg-dark);
-}
-
-body.light-mode .icons a {
-    color: var(--fg-dark);
-}
-
-body.light-mode a {
-    color: var(--fg-dark);
-}
-
-body.light-mode .iframe-warning {
-    color: var(--color-darkorange);
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--fg-light);
-}
-
-body.dark-mode .icons a {
-    color: var(--fg-light);
-}
-
-body.dark-mode a {
-    color: var(--fg-light);
-}
-
 /* Toggle button */
 .theme-toggle-button {
     position: absolute;
@@ -183,10 +168,24 @@ body.dark-mode a {
     background: none;
     border: 2px solid currentColor;
     padding: 0.5rem 1rem;
-    cursor: pointer;
+    cursor:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="4" fill="white"/><circle cx="16" cy="16" r="3" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.5" /></filter></defs></svg>')
+            16 16,
+        auto;
     font-size: 1rem;
     color: inherit;
     border-radius: 5px;
+}
+
+#under-btn-txt {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: none;
+    font-size: 1rem;
+    color: inherit;
+    font-weight: bolder;
+    opacity: 0;
 }
 
 /* Responsive styles */
@@ -221,6 +220,11 @@ body.dark-mode a {
 
     #author {
         font-size: 1.7vw;
+    }
+
+    #under-btn-txt {
+        top: 10px;
+        right: 125px;
     }
 }
 
@@ -263,6 +267,11 @@ body.dark-mode a {
 
     #author {
         font-size: 2.2vw;
+    }
+
+    #under-btn-txt {
+        top: 50px;
+        right: 10px;
     }
 }
 

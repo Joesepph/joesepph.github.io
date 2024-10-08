@@ -1,18 +1,19 @@
-const toggleButton = document.querySelector(".theme-toggle-button");
-const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".theme-toggle-button");
+  const text = document.getElementById("under-btn-txt");
 
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  body.classList.toggle("light-mode");
-  toggleButton.textContent = body.classList.contains("dark-mode")
-    ? "Light Mode"
-    : "Dark Mode";
+  button.addEventListener("click", function () {
+    // set opacity to 100%
+    text.style.opacity = "1";
+    text.style.transition = "opacity 0s";
+
+    // fade out after a delay
+    setTimeout(() => {
+      text.style.opacity = "0";
+      text.style.transition = "opacity 0.6s ease-out";
+    }, 250);
+  });
 });
-
-// Initialize button text
-toggleButton.textContent = body.classList.contains("dark-mode")
-  ? "Light Mode"
-  : "Dark Mode";
 
 // function to fetch .json file data and display one random quote each time the website loads
 async function quoteRandomizer() {
@@ -34,8 +35,7 @@ async function quoteRandomizer() {
 
     // display the quote
     document.getElementById("quote").innerHTML = `"${randomQuote.quote}"`;
-    document.getElementById("author").innerHTML =
-      `~ ${randomQuote.philosopher}`;
+    document.getElementById("author").innerHTML = `~ ${randomQuote.author}`;
   } catch (error) {
     console.error(
       "Oopsie Daisy, seems like there was an error generating a quote!",

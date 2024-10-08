@@ -1,122 +1,198 @@
 [
   {
-    "philosopher": "Socrates",
-    "quote": "The unexamined life is not worth living."
+    "author": "Monkey D. Luffy (One Piece)",
+    "quote": "If you don't take risks, you can't create a future!"
   },
   {
-    "philosopher": "Plato",
-    "quote": "Wise men speak because they have something to say; fools because they have to say something."
+    "author": "Lelouch Lamperouge (Code Geass)",
+    "quote": "The only ones who should kill are those prepared to be killed."
   },
   {
-    "philosopher": "Aristotle",
-    "quote": "Knowing yourself is the beginning of all wisdom."
+    "author": "Naruto Uzumaki (Naruto)",
+    "quote": "I'm not gonna run away, I never go back on my word! That's my nindo: my ninja way!"
   },
   {
-    "philosopher": "Confucius",
-    "quote": "It does not matter how slowly you go as long as you do not stop."
+    "author": "Edward Elric (Fullmetal Alchemist)",
+    "quote": "A lesson without pain is meaningless. For you cannot gain anything without sacrificing something else in return."
   },
   {
-    "philosopher": "Lao Tzu",
-    "quote": "The journey of a thousand miles begins with one step."
+    "author": "Spike Spiegel (Cowboy Bebop)",
+    "quote": "I'm not going there to die. I'm going to find out if I'm really alive."
   },
   {
-    "philosopher": "Immanuel Kant",
-    "quote": "Science is organized knowledge. Wisdom is organized life."
+    "author": "Gintoki Sakata (Gintama)",
+    "quote": "If you have time to think of a beautiful end, then live beautifully until the end."
   },
   {
-    "philosopher": "René Descartes",
-    "quote": "I think, therefore I am."
+    "author": "Eren Yeager (Attack on Titan)",
+    "quote": "I don't have time to worry if it's right or wrong, you can't hope for a horror story with a happy ending."
   },
   {
-    "philosopher": "John Locke",
-    "quote": "What worries you, masters you."
+    "author": "Saitama (One Punch Man)",
+    "quote": "Human beings are strong because we have the ability to change ourselves."
   },
   {
-    "philosopher": "David Hume",
-    "quote": "Beauty in things exists in the mind which contemplates them."
+    "author": "Vegeta (Dragon Ball Z)",
+    "quote": "A true warrior doesn't rest until the battle is done."
   },
   {
-    "philosopher": "Jean-Jacques Rousseau",
-    "quote": "Man is born free, and everywhere he is in chains."
+    "author": "Kakashi Hatake (Naruto)",
+    "quote": "In the ninja world, those who break the rules are scum, that's true, but those who abandon their friends are worse than scum."
   },
   {
-    "philosopher": "Friedrich Nietzsche",
-    "quote": "He who has a why to live can bear almost any how."
+    "author": "Roy Mustang (Fullmetal Alchemist)",
+    "quote": "When I, who am called a 'weapon' or a 'monster', fight a real monster, I can fully realize I'm just a human."
   },
   {
-    "philosopher": "Karl Marx",
-    "quote": "The philosophers have only interpreted the world, in various ways. The point, however, is to change it."
+    "author": "Mikasa Ackerman (Attack on Titan)",
+    "quote": "This world is cruel. It's also very beautiful."
   },
   {
-    "philosopher": "Arthur Schopenhauer",
-    "quote": "The world is my idea."
+    "author": "Alphonse Elric (Fullmetal Alchemist)",
+    "quote": "Humankind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost."
   },
   {
-    "philosopher": "John Stuart Mill",
-    "quote": "The only freedom which deserves the name is that of pursuing our own good in our own way."
+    "author": "Kenshin Himura (Rurouni Kenshin)",
+    "quote": "You can die anytime, but living takes true courage."
   },
   {
-    "philosopher": "Bertrand Russell",
-    "quote": "The good life is one inspired by love and guided by knowledge."
+    "author": "Gon Freecss (Hunter x Hunter)",
+    "quote": "I don't care if this is the end. I'll use everything. I'll fight you with everything I have!"
   },
   {
-    "philosopher": "Simone de Beauvoir",
-    "quote": "One is not born, but rather becomes, a woman."
+    "author": "Izuku Midoriya (My Hero Academia)",
+    "quote": "It's not bad to dream. But you also have to consider what's realistic."
   },
   {
-    "philosopher": "Søren Kierkegaard",
-    "quote": "Life can only be understood backwards; but it must be lived forwards."
+    "author": "Killua Zoldyck (Hunter x Hunter)",
+    "quote": "I'm so tired of killing... I just want to be a kid. Hanging out, doing stuff with Gon. That's it."
   },
   {
-    "philosopher": "Michel Foucault",
-    "quote": "Knowledge is not for knowing: knowledge is for cutting."
+    "author": "Yato (Noragami)",
+    "quote": "A god of fortune? Don't make me laugh. What good is a god who can't even save one life?"
   },
   {
-    "philosopher": "Hannah Arendt",
-    "quote": "The most radical revolutionary will become a conservative the day after the revolution."
+    "author": "Erza Scarlet (Fairy Tail)",
+    "quote": "Hurt me with the truth. But never comfort me with a lie."
   },
   {
-    "philosopher": "G.W.F. Hegel",
-    "quote": "Nothing great in the world has ever been accomplished without passion."
+    "author": "Natsuki Subaru (Re:Zero)",
+    "quote": "If you can't do something, then don't. Focus on what you can do."
   },
   {
-    "philosopher": "Ludwig Wittgenstein",
-    "quote": "The limits of my language mean the limits of my world."
+    "author": "All Might (My Hero Academia)",
+    "quote": "It's not bad to dream. But you also have to consider what's realistic."
   },
   {
-    "philosopher": "Albert Camus",
-    "quote": "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion."
+    "author": "Shōyō Hinata (Haikyuu!!)",
+    "quote": "Talent is something you make bloom, instinct is something you polish."
   },
   {
-    "philosopher": "Martin Heidegger",
-    "quote": "Being is the most self-evident and yet the most difficult thing."
+    "author": "Meruem (Hunter x Hunter)",
+    "quote": "You believe I cannot pray with a single arm? A prayer comes from the heart."
   },
   {
-    "philosopher": "Maurice Merleau-Ponty",
-    "quote": "We know not through our intellect but through our experience."
+    "author": "Kamina (Gurren Lagann)",
+    "quote": "Don't believe in yourself. Believe in me! Believe in the Kamina who believes in you!"
   },
   {
-    "philosopher": "Jacques Derrida",
-    "quote": "There is nothing outside the text."
+    "author": "Yuki Takeya (Gakkou Gurashi!)",
+    "quote": "As long as you're alive, you have infinite possibilities."
   },
   {
-    "philosopher": "Edmund Husserl",
-    "quote": "We are not natural products of the natural world."
+    "author": "Char Aznable (Mobile Suit Gundam)",
+    "quote": "The Earth is the cradle of humanity, but mankind cannot stay in the cradle forever."
   },
   {
-    "philosopher": "Baruch Spinoza",
-    "quote": "The more you struggle to live, the less you live."
+    "author": "Shinji Ikari (Neon Genesis Evangelion)",
+    "quote": "I mustn't run away... I mustn't run away... I mustn't run away...!"
   },
   {
-    "philosopher": "Francis Bacon",
-    "quote": "Knowledge is power."
+    "author": "Kaneki Ken (Tokyo Ghoul)",
+    "quote": "Never trust anyone too much, remember the devil was once an angel."
   },
   {
-    "philosopher": "Heraclitus",
-    "quote": "No man ever steps in the same river twice, for it's not the same river and he's not the same man."
+    "author": "Ryuk (Death Note)",
+    "quote": "Humans are so... interesting."
   },
   {
-    "philosopher": "Epictetus",
-    "quote": "It's not what happens to you, but how you react to it that matters."
+    "author": "Guts (Berserk)",
+    "quote": "You're going to be all right. You just stumbled over a stone in the road. It means nothing. Your goal lies far beyond this. Doesn't it? I'm sure you'll overcome this. You'll walk again... soon."
+  },
+  {
+    "author": "Shigeo Kageyama (Mob Psycho 100)",
+    "quote": "The powers I have are meant to be used for other people, not for myself."
+  },
+  {
+    "author": "Satoru Fujinuma (Erased)",
+    "quote": "I'm not going to quit. I don't want... to have any regrets."
+  },
+  {
+    "author": "Winry Rockbell (Fullmetal Alchemist)",
+    "quote": "I want you to remember that you're not alone. Don't carry the burden by yourself."
+  },
+  {
+    "author": "Maka Albarn (Soul Eater)",
+    "quote": "If you feel like you're about to give up, remember why you've held on for so long."
+  },
+  {
+    "author": "Vash the Stampede (Trigun)",
+    "quote": "The ticket to the future is always open."
+  },
+  {
+    "author": "Mumen Rider (One Punch Man)",
+    "quote": "It's not about winning or losing! It's about me taking you on right here, right now!"
+  },
+  {
+    "author": "Korosensei (Assassination Classroom)",
+    "quote": "Whether you're a spectator or a player, what's truly foolish is to not even try."
+  },
+  {
+    "author": "Natsu Dragneel (Fairy Tail)",
+    "quote": "We don't have to know what tomorrow holds! That's why we can live for everything we're worth today!"
+  },
+  {
+    "author": "Alucard (Hellsing)",
+    "quote": "Giving up kills people. When people reject giving up... they finally win the right to transcend humanity."
+  },
+  {
+    "author": "Guts (Berserk)",
+    "quote": "If you're always worried about crushing the ants beneath you, you won't be able to walk."
+  },
+  {
+    "author": "Guts (Berserk)",
+    "quote": "You should feel the pain of others as your own, and never avert your eyes from it."
+  },
+  {
+    "author": "Guts (Berserk)",
+    "quote": "You're always gambling with your life, no matter what you do."
+  },
+  {
+    "author": "Griffith (Berserk)",
+    "quote": "A dream... It's something you do for yourself, not for others."
+  },
+  {
+    "author": "Casca (Berserk)",
+    "quote": "Even if we painstakingly piece together something lost, it doesn't mean things will ever go back to how they were."
+  },
+  {
+    "author": "Spike Spiegel (Cowboy Bebop)",
+    "quote": "Whatever happens, happens."
+  },
+  {
+    "author": "L Lawliet (Death Note)",
+    "quote": "Risking your life and doing something that could easily rob you of your life are exact opposites."
+  },
+  {
+    "author": "Hachiman Hikigaya (Oregairu)",
+    "quote": "Hard work betrays none, but dreams betray many."
+  },
+  {
+    "author": "Rider (Fate/Zero)",
+    "quote": "Destruction and creation are two sides of the same coin. By destroying the old, we pave the way for the new."
+  },
+  {
+    "author": "Simon (Gurren Lagann)",
+    "quote": "Believe in the you who believes in yourself!"
   }
 ]
