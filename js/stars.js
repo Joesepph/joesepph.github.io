@@ -6,7 +6,7 @@ const starCount = 1000;
 for (let i = 0; i < starCount; i++) {
   const star = document.createElement("div");
   star.className = "star";
-  const size = Math.random() * 3 + 1;
+  const size = Math.random() * 6 + 3;
   star.style.width = `${size}px`;
   star.style.height = `${size}px`;
   star.style.left = `${Math.random() * 100}%`;
@@ -31,13 +31,21 @@ document.addEventListener("mousemove", (e) => {
     const maxDistance = 50;
 
     if (distance < maxDistance) {
-      const scale = 1 + (1 - distance / maxDistance) * 30;
-      const opacity = 0.5 + (1 - distance / maxDistance) * 0.5; // Adjust opacity based on distance
+      const scale = 1 + (1 - distance / maxDistance) * 10;
+      const opacity = 0.5 + (1 - distance / maxDistance) * 0.5;
       star.style.transform = `scale(${scale})`;
+      star.style.backgroundColor = "#a7b4cb";
       star.style.opacity = opacity;
-    } else {
-      star.style.transform = "scale(1)";
-      star.style.opacity = "0.5"; // Return to 50% transparency
+
+      // Clear any existing timeout
+      clearTimeout(star.timeout);
+
+      // Set a new timeout for the trail effect
+      star.timeout = setTimeout(() => {
+        star.style.transform = "scale(1)";
+        star.style.opacity = "0.5";
+        star.style.backgroundColor = "#5c6370";
+      }, 1500);
     }
   });
 });

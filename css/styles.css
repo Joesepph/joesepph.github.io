@@ -32,7 +32,6 @@ body {
     flex-direction: column;
     align-items: left;
     line-height: 1.8;
-    overflow: hidden;
     cursor:
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.5" fill="white"/><circle cx="8" cy="8" r="2" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.3" /></filter></defs></svg>')
             8 8,
@@ -46,14 +45,16 @@ body {
     width: 100%;
     height: 100%;
     background-color: #1e2127;
-    z-index: -1; /* Ensures the background stays behind the content */
+    z-index: -1;
 }
 
 .star {
     position: absolute;
     background-color: #5c6370;
     border-radius: 50%;
-    transition: opacity 0.5s ease;
+    transition:
+        transform 0.2s ease,
+        background-color 0.1s ease;
     opacity: 0.5;
 }
 
