@@ -1,321 +1,196 @@
+@font-face {
+    font-family: GaramondClassicoSC;
+    src: url(Garamond\ Classico\ SC\ Regular.ttf);
+}
+
 :root {
-    --bg-dark: #f9f9f9;
-    --fg-light: #ffffe6;
-
-    --color-yellow: #d19a66;
-    --color-green: #98c379;
-    --color-blue: #56b6c2;
-
-    --selection-bg: #50a14f;
-    --selection-color: #383a42;
+    --card-width: 600px;
+    --card-height: 300px;
+    --card-color: #eae6dc;
+    --text-color: #2b2b2b;
+    --font-primary: "GaramondClassicoSC";
 }
 
-::-moz-selection {
-    /* Code for Firefox */
-    color: var(--selection-color);
-    background: var(--selection-bg);
-}
-
-::selection {
-    color: var(--selection-color);
-    background: var(--selection-bg);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Rubik";
-    background-color: var(--bg-dark);
-    color: var(--fg-light);
-    margin: 0;
-    padding: 1.5vw;
+    min-height: 100vh;
+    background: rgb(227, 224, 213);
+    background: linear-gradient(
+        221deg,
+        rgba(227, 224, 213, 1) 0%,
+        rgba(184, 179, 156, 1) 35%,
+        rgba(113, 112, 104, 1) 100%
+    );
     display: flex;
-    font-size: 1.5vw;
-    flex-direction: column;
-    align-items: left;
-    line-height: 1.8;
-    cursor:
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.5" fill="white"/><circle cx="8" cy="8" r="2" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.3" /></filter></defs></svg>')
-            8 8,
-        auto;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
 }
 
-#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1e2127;
-    z-index: -1;
-}
-
-.star {
-    position: absolute;
-    background-color: #5c6370;
-    border-radius: 50%;
-    transition:
-        transform 0.2s ease,
-        background-color 0.1s ease;
-    opacity: 0.5;
-}
-
-header {
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    font-style: italic;
-}
-
-header h1 {
-    font-size: 5vw;
-    margin: 0;
-}
-
-main {
-    box-sizing: border-box;
-    text-align: left;
-}
-
-main p {
-    font-size: 2.2vw;
-    font-style: italic;
-}
-
-section {
-    margin-bottom: 2vw;
-}
-
-footer {
+.hint {
     text-align: center;
-    font-size: 0.8vw;
-}
-
-h2 {
-    font-size: 4vw;
-    margin-bottom: 1vw;
-}
-
-.highlight-yellow {
-    color: var(--color-yellow);
-    font-weight: bold;
-}
-
-.highlight-blue {
-    color: var(--color-blue);
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 12px;
 }
 
 a {
-    color: var(--fg-light);
-    margin: 0 0.5vw;
+    color: var(--text-color);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: text-shadow 0.2s;
 }
 
 a:hover {
-    cursor:
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="4" fill="white"/><circle cx="16" cy="16" r="3" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.5" /></filter></defs></svg>')
-            16 16,
-        auto;
-    color: var(--color-green) !important;
-}
-
-.zed-a {
-    margin: 0;
-    font-weight: bold;
-    font-style: italic;
+    text-shadow: 0px 0px 1px black;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    perspective: 1000px;
+    margin: 20px;
 }
 
-.intro-section {
-    flex: 40vw;
+.business-card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    cursor: pointer;
 }
 
-.spotify-section {
-    flex: 1;
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.iframe-warning {
-    color: var(--color-yellow);
-    font-size: 0.8vw;
-    font-style: italic;
+.business-card.flipped .card-inner {
+    transform: rotateY(180deg);
 }
 
-/* #quotebox doesn't work for some reason lol */
-#quote {
-    font-size: 1vw;
-}
-
-#author {
-    font-size: 1vw;
-}
-
-#quotebox {
-    margin-top: 5vw;
-}
-
-/* Toggle button */
-.theme-toggle-button {
+.card-front,
+.card-back {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: 2px solid currentColor;
-    padding: 0.5rem 1rem;
-    cursor:
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="4" fill="white"/><circle cx="16" cy="16" r="3" fill="white" filter="url(%23blur)"/><defs><filter id="blur"><feGaussianBlur stdDeviation="0.5" /></filter></defs></svg>')
-            16 16,
-        auto;
-    font-size: 1rem;
-    color: inherit;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 40px 60px;
+    background: var(--card-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 5px;
 }
 
-#under-btn-txt {
+.card-front {
+    gap: 8px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-front .company-name {
+    text-align: right;
+}
+
+.company-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.name-container {
+    text-align: center;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 24px;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.email,
+.address {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.watermark {
     position: absolute;
-    top: 50px;
-    right: 10px;
-    background: none;
-    font-size: 1rem;
-    color: inherit;
-    font-weight: bolder;
-    opacity: 0;
+    right: 30px;
+    bottom: 20px;
+    font-size: 14px;
+    color: rgba(43, 43, 43, 0.5);
 }
 
-/* Responsive styles */
-@media (max-width: 1080px) {
-    body {
-        font-size: 2vw;
-    }
-
-    header h1 {
-        font-size: 6vw;
-    }
-
-    main p {
-        font-size: 3.2vw;
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
-
-    footer {
-        font-size: 1.8vw;
-    }
-
-    .iframe-warning {
-        font-size: 1.5vw;
-    }
-
-    #quote {
-        font-size: 1.7vw;
-    }
-
-    #author {
-        font-size: 1.7vw;
-    }
-
-    #under-btn-txt {
-        top: 10px;
-        right: 125px;
-    }
+.click-me {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
 }
 
-@media (max-width: 720px) {
-    body {
-        font-size: 3vw;
+@media (max-width: 640px) {
+    :root {
+        --card-width: 320px;
+        --card-height: 180px;
     }
 
-    header {
-        width: 70%;
+    .card-front,
+    .card-back {
+        padding: 20px 30px;
     }
 
-    header h1 {
-        font-size: 7vw;
+    .company-name {
+        font-size: 18px;
     }
 
-    main p {
-        font-size: 4.2vw;
+    .name {
+        font-size: 24px;
     }
 
-    h2 {
-        font-size: 6vw;
+    .title {
+        font-size: 14px;
+        margin-bottom: 2px;
     }
 
-    footer {
-        font-size: 2.8vw;
+    .contact-info,
+    .email,
+    .address {
+        line-height: 1.4;
+        font-size: 12px;
     }
 
-    .iframe-warning {
-        font-size: 2vw;
+    .watermark {
+        right: 15px;
+        bottom: 10px;
+        font-size: 10px;
     }
 
-    .container {
-        display: unset;
-    }
-
-    #quote {
-        font-size: 2.2vw;
-    }
-
-    #author {
-        font-size: 2.2vw;
-    }
-
-    #under-btn-txt {
-        top: 50px;
-        right: 10px;
-    }
-}
-
-@media (max-width: 540px) {
-    body {
-        font-size: 3.8vw;
-    }
-
-    header {
-        width: 70%;
-    }
-
-    header h1 {
-        font-size: 7.8vw;
-    }
-
-    main p {
-        font-size: 5vw;
-    }
-
-    main {
-        margin-right: 10vw;
-    }
-
-    h2 {
-        font-size: 6.8vw;
-    }
-
-    footer {
-        font-size: 3.6vw;
-    }
-
-    .iframe-warning {
-        font-size: 2.5vw;
-    }
-
-    .container {
-        display: unset;
-    }
-
-    #quote {
-        font-size: 2.7vw;
-    }
-
-    #author {
-        font-size: 2.7vw;
+    .click-me {
+        display: block;
     }
 }
