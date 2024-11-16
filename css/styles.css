@@ -147,7 +147,6 @@ a:hover {
 }
 
 .click-me {
-    display: none;
     text-align: center;
     margin-top: 10px;
     font-size: 16px;
@@ -188,9 +187,5 @@ a:hover {
         right: 15px;
         bottom: 10px;
         font-size: 10px;
-    }
-
-    .click-me {
-        display: block;
     }
 }
