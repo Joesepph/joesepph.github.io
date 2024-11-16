@@ -4,10 +4,11 @@
 }
 
 :root {
+    --background-texture: url(table-texture.jpg);
     --card-width: 600px;
     --card-height: 300px;
-    --card-color: #eae6dc;
-    --text-color: #2b2b2b;
+    --card-texture: url(card-texture.avif);
+    --text-color: #483f2b;
     --font-primary: "GaramondClassicoSC";
 }
 
@@ -19,13 +20,15 @@
 
 body {
     min-height: 100vh;
-    background: rgb(227, 224, 213);
+    background-image: var(--background-texture);
+    background-size: cover;
+    /* background: rgb(227, 224, 213);
     background: linear-gradient(
         221deg,
         rgba(227, 224, 213, 1) 0%,
         rgba(184, 179, 156, 1) 35%,
         rgba(113, 112, 104, 1) 100%
-    );
+    ); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +36,7 @@ body {
 }
 
 .hint {
+    color: beige;
     text-align: center;
     margin-bottom: 10px;
     font-size: 12px;
@@ -45,7 +49,7 @@ a {
 }
 
 a:hover {
-    text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px var(--text-color);
 }
 
 .container {
@@ -58,6 +62,25 @@ a:hover {
     height: var(--card-height);
     position: relative;
     cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.front-shadow,
+.back-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+    z-index: -1;
+}
+
+.business-card:hover .front-shadow,
+.business-card:hover .back-shadow {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
 }
 
 .card-inner {
@@ -65,29 +88,27 @@ a:hover {
     width: 100%;
     height: 100%;
     text-align: left;
-    transition: transform 0.8s;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
 }
 
 .business-card.flipped .card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .card-front,
 .card-back {
+    background-image: var(--card-texture);
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     padding: 40px 60px;
-    background: var(--card-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
 }
-
 .card-front {
     gap: 8px;
 }
@@ -100,16 +121,18 @@ a:hover {
     text-align: right;
 }
 
-.company-name {
-    font-size: 26px;
-    font-weight: bold;
+.status {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 22px;
     color: var(--text-color);
-    letter-spacing: 1px;
-    margin-bottom: 12px;
 }
 
 .name-container {
+    color: var(--text-color);
     text-align: center;
+    margin-top: 115px;
 }
 
 .name {
@@ -127,29 +150,71 @@ a:hover {
 }
 
 .contact-info {
+    text-align: center;
     font-size: 16px;
     color: var(--text-color);
-    line-height: 1.6;
+    margin-top: 45px;
 }
 
-.email,
+.email {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
 .address {
     font-size: 16px;
     color: var(--text-color);
 }
 
 .watermark {
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
     font-size: 14px;
     color: rgba(43, 43, 43, 0.5);
 }
 
 .click-me {
+    color: beige;
     text-align: center;
     margin-top: 10px;
     font-size: 16px;
+}
+
+.credits {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: beige;
+    font-size: 14px;
+}
+
+.credits a {
+    color: #768bb5;
+    text-decoration: none;
+    transition:
+        opacity 0.2s,
+        color 0.2s;
+}
+
+.credits a:hover {
+    color: #304775;
+    opacity: 0.8;
+}
+
+.card-back .name-container {
+    text-align: left;
+    margin-top: 115px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.card-back .name-container div {
+    margin-bottom: 10px;
+}
+
+.card-back .contact-info {
+    margin-top: 70px;
 }
 
 @media (max-width: 640px) {
@@ -163,10 +228,6 @@ a:hover {
         padding: 20px 30px;
     }
 
-    .company-name {
-        font-size: 18px;
-    }
-
     .name {
         font-size: 24px;
     }
@@ -176,11 +237,46 @@ a:hover {
         margin-bottom: 2px;
     }
 
+    .name-container {
+        margin-top: 60px;
+    }
+
+    .contact-info {
+        margin-top: 25px;
+    }
+
+    .card-back .name-container {
+        margin-top: 65px;
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .card-back .name-container div {
+        margin-bottom: 5px;
+    }
+
+    .card-back .contact-info {
+        margin-top: 35px;
+    }
+
     .contact-info,
     .email,
     .address {
-        line-height: 1.4;
         font-size: 12px;
+    }
+
+    .email,
+    .status {
+        top: 10px;
+        font-size: 12px;
+    }
+
+    .email {
+        left: 15px;
+    }
+
+    .status {
+        right: 15px;
     }
 
     .watermark {
