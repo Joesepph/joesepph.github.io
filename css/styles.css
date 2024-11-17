@@ -4,7 +4,7 @@
 }
 
 :root {
-    --background-texture: url(table-texture.jpg);
+    --background-texture: url(table-texture-comp.jpg);
     --card-width: 600px;
     --card-height: 300px;
     --card-texture: url(card-texture.jpg);
