@@ -4,12 +4,13 @@
 }
 
 :root {
-    --background-texture: url(table-texture.jpg);
+    --background-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642058520920206/table-texture.jpg?ex=673b0c11&is=6739ba91&hm=21b758172e8817d5fe9f33f02660f348b696c7c1640fc37a3dfc9123ee1f90f4&);
     --card-width: 600px;
     --card-height: 300px;
-    --card-texture: url(card-texture.jpg);
+    --card-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642057900429312/card-texture.jpg?ex=673b0c11&is=6739ba91&hm=75cec055bc281e00dfd9b125610216aa7b4abec2a2a4cfb689548fe0e76afe88&);
     --text-color: #483f2b;
     --font-primary: "GaramondClassicoSC";
+    --paper-background: #f4f1ea;
 }
 
 * {
@@ -22,17 +23,19 @@ body {
     min-height: 100vh;
     background-image: var(--background-texture);
     background-size: cover;
-    /* background: rgb(227, 224, 213);
-    background: linear-gradient(
-        221deg,
-        rgba(227, 224, 213, 1) 0%,
-        rgba(184, 179, 156, 1) 35%,
-        rgba(113, 112, 104, 1) 100%
-    ); */
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-primary);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .hint {
@@ -40,6 +43,9 @@ body {
     text-align: center;
     margin-bottom: 10px;
     font-size: 12px;
+    position: absolute;
+    top: -30px;
+    width: 100%;
 }
 
 a {
@@ -55,8 +61,11 @@ a:hover {
 .container {
     perspective: 1000px;
     margin: 20px;
+    position: relative;
+    z-index: 1;
 }
 
+/* Business Card Styles */
 .business-card {
     width: var(--card-width);
     height: var(--card-height);
@@ -110,6 +119,7 @@ a:hover {
     justify-content: center;
     border-radius: 5px;
 }
+
 .card-front {
     gap: 8px;
 }
@@ -118,7 +128,7 @@ a:hover {
     transform: rotateY(180deg);
 }
 
-.card-front .company-name {
+.card-front .status {
     text-align: right;
 }
 
@@ -180,6 +190,146 @@ a:hover {
     text-align: center;
     margin-top: 10px;
     font-size: 16px;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+}
+
+.sliding-paper {
+    position: fixed;
+    right: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background: var(--paper-background);
+    border-radius: 10px 0 0 10px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease;
+    z-index: 10;
+}
+
+.sliding-paper.peek {
+    right: 0;
+}
+
+.tab {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 50px;
+    height: 100px;
+    background: var(--paper-background);
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+}
+
+.tab:hover {
+    background: bisque;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.sliding-paper.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.paper-content {
+    padding: 40px;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.paper-content h2 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.paper-content p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.paper-content ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+.paper-content li {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.skill-tags .great {
+    background: rgba(72, 143, 45, 0.3);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.skill-tags .great:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(50, 120, 35, 0.3);
+}
+
+.skill-tags .good {
+    background: rgba(180, 120, 45, 0.3);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.skill-tags .good:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(140, 80, 25, 0.3);
+}
+
+.skill-tags .learning {
+    background: rgba(180, 63, 43, 0.3);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.skill-tags .learning:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(140, 35, 35, 0.3);
 }
 
 .credits {
@@ -218,6 +368,28 @@ a:hover {
     margin-top: 70px;
 }
 
+@media (max-width: 1200px) {
+    .sliding-paper {
+        right: -100%;
+    }
+
+    .tab {
+        width: 45px;
+        height: 95px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sliding-paper {
+        right: -95%;
+    }
+
+    .tab {
+        width: 40px;
+        height: 90px;
+    }
+}
+
 @media (max-width: 640px) {
     :root {
         --card-width: 320px;
@@ -235,40 +407,10 @@ a:hover {
 
     .title {
         font-size: 14px;
-        margin-bottom: 2px;
-    }
-
-    .name-container {
-        margin-top: 60px;
-    }
-
-    .contact-info {
-        margin-top: 25px;
-    }
-
-    .card-back .name-container {
-        margin-top: 65px;
-        font-size: 16px;
-        line-height: 1.1;
-    }
-
-    .card-back .name-container div {
-        margin-bottom: 5px;
-    }
-
-    .card-back .contact-info {
-        margin-top: 35px;
-    }
-
-    .contact-info,
-    .email,
-    .address {
-        font-size: 12px;
     }
 
     .email,
     .status {
-        top: 10px;
         font-size: 12px;
     }
 
@@ -278,11 +420,38 @@ a:hover {
 
     .status {
         right: 15px;
+        top: 10px;
+    }
+
+    .address {
+        font-size: 12px;
     }
 
     .watermark {
-        right: 15px;
-        bottom: 10px;
         font-size: 10px;
+    }
+
+    .sliding-paper {
+        max-width: 100%;
+        right: -100%;
+        height: 90vh;
+    }
+
+    .tab {
+        width: 35px;
+        height: 80px;
+    }
+
+    .paper-content {
+        padding: 20px;
+    }
+
+    .paper-content h2 {
+        font-size: 1.5em;
+    }
+
+    .skill-tags span {
+        font-size: 0.8em;
+        padding: 4px 12px;
     }
 }
