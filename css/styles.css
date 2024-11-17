@@ -3,6 +3,11 @@
     src: url(Garamond\ Classico\ SC\ Regular.ttf);
 }
 
+@font-face {
+    font-family: FunnelDisplay;
+    src: url(FunnelDisplay-VariableFont_wght.ttf);
+}
+
 :root {
     --background-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642058520920206/table-texture.jpg?ex=673b0c11&is=6739ba91&hm=21b758172e8817d5fe9f33f02660f348b696c7c1640fc37a3dfc9123ee1f90f4&);
     --card-width: 600px;
@@ -10,13 +15,22 @@
     --card-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642057900429312/card-texture.jpg?ex=673b0c11&is=6739ba91&hm=75cec055bc281e00dfd9b125610216aa7b4abec2a2a4cfb689548fe0e76afe88&);
     --text-color: #483f2b;
     --font-primary: "GaramondClassicoSC";
+    --font-sliding-paper: "FunnelDisplay";
     --paper-background: #f4f1ea;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-smooth: always;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -48,14 +62,37 @@ body {
     width: 100%;
 }
 
-a {
+.name-container a {
     color: var(--text-color);
     text-decoration: none;
     transition: text-shadow 0.2s;
 }
 
-a:hover {
-    text-shadow: 0px 0px 1px var(--text-color);
+.name-container a:hover {
+    text-shadow: 0px 0px 2px var(--text-color);
+}
+
+.email a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    /* Change gradient direction and color stops */
+    background: linear-gradient(
+        90deg,
+        var(--text-color) 0%,
+        var(--text-color) 50%,
+        transparent 50%,
+        transparent 100%
+    );
+    background-size: 200% 1px;
+    background-position: 100% 100%; /* Start from right */
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.email a:hover {
+    background-position: 0% 100%;
 }
 
 .container {
@@ -196,6 +233,7 @@ a:hover {
 }
 
 .sliding-paper {
+    font-family: var(--font-sliding-paper);
     position: fixed;
     right: -50%;
     top: 50%;
@@ -228,10 +266,15 @@ a:hover {
     cursor: pointer;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 11;
+    transition: background 0.2s ease;
 }
 
 .tab:hover {
-    background: bisque;
+    background: #483f2b;
+}
+
+.tab:hover .arrow-icon {
+    fill: var(--paper-background);
 }
 
 .arrow-icon {
@@ -415,12 +458,31 @@ a:hover {
     }
 
     .email {
+        top: 10px;
         left: 15px;
     }
 
     .status {
         right: 15px;
         top: 10px;
+    }
+
+    .name-container {
+        margin-top: 65px;
+    }
+
+    .contact-info {
+        margin-top: 0px;
+    }
+
+    .card-back .contact-info {
+        margin-top: 30px;
+    }
+
+    .card-back .name-container {
+        margin-top: 65px;
+        font-size: 14px;
+        line-height: 1.2;
     }
 
     .address {
