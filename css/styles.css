@@ -9,10 +9,10 @@
 }
 
 :root {
-    --background-texture: url(card-texture.jpg);
+    --background-texture: url(table-texture.jpg);
     --card-width: 600px;
     --card-height: 300px;
-    --card-texture: url(table-texture.jpg);
+    --card-texture: url(card-texture.jpg);
     --text-color: #483f2b;
     --font-primary: "GaramondClassicoSC";
     --font-sliding-paper: "FunnelDisplay";
