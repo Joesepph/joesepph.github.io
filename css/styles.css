@@ -9,10 +9,10 @@
 }
 
 :root {
-    --background-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642058520920206/table-texture.jpg?ex=673b0c11&is=6739ba91&hm=21b758172e8817d5fe9f33f02660f348b696c7c1640fc37a3dfc9123ee1f90f4&);
+    --background-texture: url(card-texture.jpg);
     --card-width: 600px;
     --card-height: 300px;
-    --card-texture: url(https://cdn.discordapp.com/attachments/973212111859757066/1307642057900429312/card-texture.jpg?ex=673b0c11&is=6739ba91&hm=75cec055bc281e00dfd9b125610216aa7b4abec2a2a4cfb689548fe0e76afe88&);
+    --card-texture: url(table-texture.jpg);
     --text-color: #483f2b;
     --font-primary: "GaramondClassicoSC";
     --font-sliding-paper: "FunnelDisplay";
