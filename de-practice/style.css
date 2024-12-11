@@ -277,17 +277,6 @@ body {
     }
 }
 
-@media (max-height: 600px) {
-    .quiz-container.active {
-        overflow: scroll;
-        background-color: red;
-    }
-
-    body {
-        overflow: scroll;
-    }
-}
-
 .snowflake {
     position: fixed;
     color: var(--snow-white);
