@@ -203,6 +203,7 @@ body {
 .option:active {
     transform: translateY(0);
 }
+
 .next-button {
     display: none;
     background: var(--christmas-green, #2f5233);
@@ -277,8 +278,9 @@ body {
 }
 
 @media (max-height: 600px) {
-    .quiz-container .active {
-        overflow-y: scroll;
+    .quiz-container.active {
+        overflow: scroll;
+        background-color: red;
     }
 }
 
