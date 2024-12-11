@@ -103,6 +103,7 @@ body {
 
 .quiz-container.active {
     display: block;
+    overflow: scroll;
 }
 
 .progress-bar {
@@ -258,10 +259,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    body {
-        overflow: auto;
-    }
-
     .title {
         font-size: 2em;
     }
