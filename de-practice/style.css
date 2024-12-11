@@ -282,6 +282,10 @@ body {
         overflow: scroll;
         background-color: red;
     }
+
+    body {
+        overflow: scroll;
+    }
 }
 
 .snowflake {
