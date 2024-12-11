@@ -258,6 +258,10 @@ body {
 }
 
 @media (max-width: 600px) {
+    body {
+        overflow: auto;
+    }
+
     .title {
         font-size: 2em;
     }
